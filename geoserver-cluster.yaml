@@ -11,8 +11,8 @@ services:
       - "80:80"
       - "443:443"
     volumes: 
-      - /data/cluster2/nginx/conf.d:/etc/nginx/conf.d
-      - /data/cluster2/nginx/log:/var/log/nginx
+      - /home/queimadas/project/geoserver-cluster/nginx/conf.d:/etc/nginx/conf.d:ro
+      - /srv/dados/nginx/log:/var/log/nginx
 
     gsmaster:
       image: terrabrasilis/geoserver-master:v1.0.6
