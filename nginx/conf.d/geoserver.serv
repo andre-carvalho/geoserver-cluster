@@ -1,0 +1,11 @@
+  location /geoserver {
+    proxy_pass http://gs-cluster-upstream/geoserver;
+  }
+
+  location /geoserver/web/ {
+    proxy_pass http://gs-cluster-upstream-adm/geoserver/web/;
+  }
+
+  location /geoserver/openlayers3/ {
+    proxy_pass http://gs-cluster-upstream-adm/geoserver/openlayers3/;
+  }
