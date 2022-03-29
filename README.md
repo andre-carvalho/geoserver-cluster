@@ -90,7 +90,23 @@ chmod +x ~/.docker/cli-plugins/docker-compose
 sudo chown $USER /var/run/docker.sock
 ```
 
-### Crianção dos arquivos base
+### Instalar GeoServer plugins
+
+ > Obtidos de: http://geoserver.org/release/2.16.0/
+
+```sh
+# copiar os arquivos pra esta pasta e descompactar, um plugin por pasta.
+cd /srv/dados/geoserver/gs_extensions
+
+# estes estão instalados:
+# controlflow/
+# imagepyramid/
+# netcdf/
+```
+
+Após instalar um novo plugin, é necessário reiniciar o cluster. Ver sessão "Inciar/parar o cluster".
+
+### Criação dos arquivos base
 
 Arquivo da stack, compatível com docker compose: geoserver-cluster.yaml
 Arquivos de configuração do load balance: nginx/conf.d/
@@ -100,3 +116,7 @@ Repositório privado em (este repo): https://github.com/andre-carvalho/geoserver
 Clonado em: /home/queimadas/project/geoserver-cluster
 
 Script para startup do cluster em: /home/queimadas/gs-cluster-startup.sh
+
+### Local dos dados
+
+Os dados e arquivos de configuração estão em: /srv/dados/geoserver/gs_datadir
