@@ -4,7 +4,7 @@ version: '3.4'
 services:
   load_balance:
     image: terrabrasilis/nginx-manager:v1.0
-    hostname: load_balance
+    container_name: load_balance
     networks:
       - proxy
     ports:
