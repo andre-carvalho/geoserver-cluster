@@ -10,6 +10,7 @@ services:
       - "gsslave1"
       - "gsslave2"
       - "gsslave3"
+    restart: always
     networks:
       - proxy
     ports:
