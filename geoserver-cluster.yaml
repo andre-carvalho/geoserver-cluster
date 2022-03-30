@@ -5,6 +5,11 @@ services:
   load_balance:
     image: terrabrasilis/nginx-manager:v1.0
     container_name: load_balance
+    depends_on:
+      - "gsmaster"
+      - "gsslave1"
+      - "gsslave2"
+      - "gsslave3"
     networks:
       - proxy
     ports:
