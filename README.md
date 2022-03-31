@@ -2,7 +2,7 @@
 
 Criar um cluster GeoServer com load balance e infraestrutura baseada em docker.
 
-Onde há referencia <user>, considerar qualquer usuário não root existente no host para o qual se deseja usar futuramente na operação do cluster.
+Onde há referencia &lt;user&gt;, considerar qualquer usuário não root existente no host para o qual se deseja usar futuramente na operação do cluster.
 
 É pré requisito:
 
@@ -53,10 +53,10 @@ Arquivos disponíveis neste repositório:
  - Arquivos de configuração do load balance: nginx/conf.d/
  - Arquivo de configuração do plugin Control flow (exemplo): gs_datadir/controlflow.properties
 
-Clonar o projeto em (exemplo de local): /home/<user>/project/geoserver-cluster
+Clonar o projeto em (exemplo de local): /home/&lt;user&gt;/project/geoserver-cluster
 
 Criar os script de operação, conforme sessões de descrição de cada um:
- - Script para startup do cluster em: /home/<user>/gs-cluster-manager.sh
+ - Script para startup do cluster em: /home/&lt;user&gt;/gs-cluster-manager.sh
  - Script para reload catalog: /usr/bin/cluster_reload_catalog
 
 ## Como usar?
@@ -67,15 +67,15 @@ Nesta sessão você encontra informações para: iniciar e parar o cluster, alte
 
 Usar sempre a interface gráfica do nó master. Já está mapeada no Nginx para o nó master então usar a porta 80 já irá apontar pra instância correta.
 
-http://<IP ou HOSTNAME>/geoserver/web
+http://&lt;IP ou HOSTNAME&gt;/geoserver/web
 ou
-http://<IP ou HOSTNAME>:8000/geoserver/web
+http://&lt;IP ou HOSTNAME&gt;:8000/geoserver/web
 
 Após realizar alterações de configuração, usar o script de sincronia, sessão: "Sincronizar as configurações"
 
 ## Inciar/parar o cluster
 
-Comandos com usuário <user>
+Comandos com usuário &lt;user&gt;
 
 ```sh
 cd /home/<user>/
@@ -136,7 +136,7 @@ curl -u admin:geoserver -v -XPOST "http://150.163.2.253:8001/geoserver/rest/relo
 curl -u admin:geoserver -v -XPOST "http://150.163.2.253:8002/geoserver/rest/reload"
 curl -u admin:geoserver -v -XPOST "http://150.163.2.253:8003/geoserver/rest/reload"
 ```
- > # <admin> e <geoserver> devem ser usuário e senha que possua permisão de acesso para alterar as configurações via interface gráfica de configurações do GeoServer. As credenciais de acesso criadas ao iniciar o cluster pela primeira vez, são as identificadas acima.
+ > &lt;admin&gt; e &lt;geoserver&gt; devem ser usuário e senha que possua permisão de acesso para alterar as configurações via interface gráfica de configurações do GeoServer. As credenciais de acesso criadas ao iniciar o cluster pela primeira vez, são as identificadas acima.
 
 
 Criar o script com o conteúdo acima e alterar permissão para execução.
@@ -191,7 +191,7 @@ usermod -aG docker <user>
 
 ### Instalar docker compose
 
-Comandos com o usuário <user>
+Comandos com o usuário &lt;user&gt;
 
  > seguindo esse tutorial: https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-compose-on-ubuntu-20-04
 
