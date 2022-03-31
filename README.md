@@ -132,9 +132,9 @@ Deve ficar no host onde o cluster estiver em execução. Caso a opção seja out
 
 ```sh
 #!/bin/bash
-curl -u admin:geoserver -v -XPOST "http://150.163.2.253:8001/geoserver/rest/reload"
-curl -u admin:geoserver -v -XPOST "http://150.163.2.253:8002/geoserver/rest/reload"
-curl -u admin:geoserver -v -XPOST "http://150.163.2.253:8003/geoserver/rest/reload"
+curl -u admin:geoserver -v -XPOST "http://<IP ou HOSTNAME>:8001/geoserver/rest/reload"
+curl -u admin:geoserver -v -XPOST "http://<IP ou HOSTNAME>:8002/geoserver/rest/reload"
+curl -u admin:geoserver -v -XPOST "http://<IP ou HOSTNAME>:8003/geoserver/rest/reload"
 ```
  > &lt;admin&gt; e &lt;geoserver&gt; devem ser usuário e senha que possua permisão de acesso para alterar as configurações via interface gráfica de configurações do GeoServer. As credenciais de acesso criadas ao iniciar o cluster pela primeira vez, são as identificadas acima.
 
