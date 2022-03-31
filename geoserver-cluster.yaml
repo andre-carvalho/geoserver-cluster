@@ -29,8 +29,8 @@ services:
     networks:
       - proxy
     volumes: 
-      - /srv/dados/geoserver/gs_datadir:/var/local/geoserver
-      - /srv/dados/geoserver/gs_extensions:/var/local/geoserver-exts
+      - /dados/geoserver/gs_datadir:/var/local/geoserver
+      - /dados/geoserver/gs_extensions:/var/local/geoserver-exts
     environment:
       COOKIE: JSESSIONID prefix
       CLUSTER_CONFIG_DIR: /var/local/geoserver/cluster/master
@@ -47,8 +47,8 @@ services:
     networks:
       - proxy
     volumes:
-      - /srv/dados/geoserver/gs_datadir:/var/local/geoserver
-      - /srv/dados/geoserver/gs_extensions:/var/local/geoserver-exts
+      - /dados/geoserver/gs_datadir:/var/local/geoserver
+      - /dados/geoserver/gs_extensions:/var/local/geoserver-exts
     environment:
       COOKIE: JSESSIONID prefix
       CLUSTER_CONFIG_DIR: /var/local/geoserver/cluster/slave1
@@ -65,8 +65,8 @@ services:
     networks:
       - proxy
     volumes:
-      - /srv/dados/geoserver/gs_datadir:/var/local/geoserver
-      - /srv/dados/geoserver/gs_extensions:/var/local/geoserver-exts
+      - /dados/geoserver/gs_datadir:/var/local/geoserver
+      - /dados/geoserver/gs_extensions:/var/local/geoserver-exts
     environment:
       COOKIE: JSESSIONID prefix
       CLUSTER_CONFIG_DIR: /var/local/geoserver/cluster/slave2
@@ -83,8 +83,8 @@ services:
     networks:
       - proxy
     volumes:
-      - /srv/dados/geoserver/gs_datadir:/var/local/geoserver
-      - /srv/dados/geoserver/gs_extensions:/var/local/geoserver-exts
+      - /dados/geoserver/gs_datadir:/var/local/geoserver
+      - /dados/geoserver/gs_extensions:/var/local/geoserver-exts
     environment:
       COOKIE: JSESSIONID prefix
       CLUSTER_CONFIG_DIR: /var/local/geoserver/cluster/slave3
